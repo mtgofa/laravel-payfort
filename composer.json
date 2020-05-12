@@ -10,8 +10,8 @@
   ],
   "authors": [
     {
-      "name": "Wael AlShurafa",
-      "email": "wael.shorafa@gmail.com"
+      "name": "Mohamed Tarek Gofa",
+      "email": "gofa_25@hotmail.com"
     }
   ],
   "support": {
@@ -22,8 +22,6 @@
   "license": "MIT",
   "require": {
     "php": ">=5.5.9",
-    "laravel/framework": "^6",
-    "illuminate/support": "~5.0",
     "nesbot/carbon": "~2.0",
     "guzzlehttp/guzzle": "~5.0|~6.0"
   },
