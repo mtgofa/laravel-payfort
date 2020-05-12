@@ -1,5 +1,5 @@
 {
-  "name": "wshurafa/laravel-payfort",
+  "name": "mtgofa/laravel-payfort",
   "description": "Laravel-payfort is a simple package to process payments throught Payfort payment gateway.",
   "keywords": [
     "http",
@@ -14,15 +14,15 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/wshurafa/laravel-payfort/issues",
-    "source": "https://github.com/wshurafa/laravel-payfort"
+    "issues": "https://github.com/mtgofa/laravel-payfort/issues",
+    "source": "https://github.com/mtgofa/laravel-payfort"
   },
   "type": "library",
   "license": "MIT",
   "require": {
     "php": ">=5.5.9",
     "illuminate/support": "~5.0",
-    "nesbot/carbon": "~1.0",
+    "nesbot/carbon": "~2.0",
     "guzzlehttp/guzzle": "~5.0|~6.0"
   },
   "require-dev": {
