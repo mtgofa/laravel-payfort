@@ -8,6 +8,19 @@ use LaravelPayfort\Exceptions\PayfortRequestException;
 
 trait PayfortAPIRequest
 {
+    public function payUsingTokenName($data)
+    {
+        $params = [
+            'command' => 'PURCHASE',
+            'access_code' => $this->config['access_code'],
+            'merchant_identifier' => $this->config['merchant_identifier'],
+            'language' => $this->config['language'],
+            ...$data
+        ];
+        $response = $this->callPayfortAPI($params);
+        return $response;
+    }
+
     /**
      * Make Payfort create mobile sdk token request & return response.
      *
@@ -162,7 +175,6 @@ trait PayfortAPIRequest
             }
 
             return $response;
-
         } catch (\Exception $e) {
             throw new PayfortException($e);
         }

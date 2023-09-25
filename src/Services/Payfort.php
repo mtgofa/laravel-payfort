@@ -81,6 +81,20 @@ abstract class Payfort
      */
     public function calcPayfortSignature(array $params, $signature_type = 'request')
     {
+        $except = [
+            'card_security_code',
+            'card_number',
+            'expiry_date',
+            'card_holder_name',
+            'remember_me'
+        ];
+
+        if (isset($params['command']) && $params['command'] == 'PURCHASE') {
+            $except = array_diff($except, ['card_security_code', 'remember_me']); // removing card_security_code while make PURCHASE request
+        }
+        $params = array_diff($params, $except);
+
+
         # Steps as listed in payfort documentation
         # 1
         ksort($params);
