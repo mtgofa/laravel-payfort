@@ -92,7 +92,7 @@ abstract class Payfort
         if (isset($params['command']) && $params['command'] == 'PURCHASE') {
             $except = array_diff($except, ['card_security_code', 'remember_me']); // removing card_security_code while make PURCHASE request
         }
-        $params = array_diff($params, $except);
+        $params = array_diff_key($params, array_flip($except));
 
 
         # Steps as listed in payfort documentation
