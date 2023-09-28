@@ -169,7 +169,8 @@ trait PayfortAPIRequest
                 throw new PayfortException(data_get($response, 'response_message'));
             }
 
-            if (data_get($response, 'response_code') != '20064') { # 3-D Secure check requested
+
+            if (!in_array(data_get($response, 'response_code'), ['20064', '06000'])) { # 3-D Secure check requested,Refund
                 # Verify response signature
                 if (data_get($response, 'signature') != $this->calcPayfortSignature(((array)$response), 'response')) {
                     throw new PayfortException('Payfort response signature mismatched');
