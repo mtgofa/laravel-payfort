@@ -46,7 +46,6 @@ class PayfortServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        \Log::debug('Registered');
         # Merge application and packages configurations
         $this->mergeConfigFrom(
             $this->configPath,
@@ -62,14 +61,14 @@ class PayfortServiceProvider extends ServiceProvider
         });
     }
 
-//    /**
-//     * Get the services provided by the provider.
-//     *
-//     * @return array
-//     */
-//    public function provides()
-//    {
-//        \Log::debug('provides');
-//        return ['LaravelPayfort\Facades\Payfort'];
-//    }
+    //    /**
+    //     * Get the services provided by the provider.
+    //     *
+    //     * @return array
+    //     */
+    //    public function provides()
+    //    {
+    //        \Log::debug('provides');
+    //        return ['LaravelPayfort\Facades\Payfort'];
+    //    }
 }
